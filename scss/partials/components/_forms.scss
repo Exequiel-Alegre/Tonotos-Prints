@@ -1,0 +1,50 @@
+.redes-contactoo {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+
+    .btn-outline {
+        padding: 6px 12px;
+        background: none;
+        cursor: pointer;
+        border-radius: 15px;
+        padding: 20px;
+        border: 1px solid #000000;
+        background-color: white;
+
+        &:hover {
+            background-color: #ddd;
+        }
+
+    }
+}
+
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    grap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+
+    .btn-outline {
+        border: 1px solid black;
+        padding: 6px 12px;
+        background: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #ddd;
+        }
+
+    }
+}
+
+.form-contacto h5 {
+    text-align: center;
+    font-weight: bold;
+    font-family: "Lilita One", sans-serif;
+    font-size: 28px;
+}

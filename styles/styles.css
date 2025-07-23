@@ -1,25 +1,39 @@
-* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-}
-
- @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 /*font-family: "Roboto Slab", serif;*/
-
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 /*font-family: "Anton", sans-serif;*/
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 
-body {
-  background-color: #f5f5f5;
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
-  font-family: "Roboto Slab", serif;
 }
 
-.logo {
-  width: 120px;
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  border-radius: 15px;
+  margin: 10px 10px;
+  margin-top: auto;
+}
+
+footer .footer-link {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer .footer-link:hover {
+  text-decoration: underline;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
 main {
@@ -28,23 +42,7 @@ main {
   padding: 20px;
 }
 
-h1 {
-  color: #4B8B3B;
-  font-weight: bold;
-  font-family: "Anton", sans-serif;
-  text-align: center;
-}
-
-.acercatitulo {
-  color: #90a14f;
-  font-weight: normal;
-  font-family: "Anton", sans-serif;
-  text-align: center;
-  margin-bottom: 20px;
-  text-decoration: underline;
-}
-
-.contenido-principal {
+main .contenido-principal {
   background-color: white;
   border: 1px solid #000;
   border-radius: 4px;
@@ -53,76 +51,209 @@ h1 {
   text-align: center;
 }
 
-
-.product {
-      border: 1px solid #ccc;
-      height: 120px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      background-color: white;
+main .contenido-principal .titulo {
+  color: #4B8B3B;
+  font-weight: bold;
+  font-family: "Anton", sans-serif;
+  font-size: 40px;
 }
 
-.product-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      width: 100%;
-      max-width: 1000px;
+.textindex {
+  font-size: 20px;
+  margin-top: 20px;
 }
 
-.titulo {
+h2 {
+  font-weight: bold;
+}
+
+.icon {
+  width: 40px;
+  padding-right: 10px;
+}
+
+.acercatitulo {
+  font-size: 28px;
   color: #4B8B3B;
   font-weight: bold;
   font-family: "Anton", sans-serif;
 }
 
-.img-acerca {
-  width: 150px;
-  margin-top: 20px;
+.navbar {
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px 10px;
 }
 
-footer {
-  background-color: black;
+.button,
+.nombree-boton,
+.redes-contacto {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  border-radius: 25px;
+  padding: 8px 16px;
+}
+
+.nombree-boton {
+  background-color: green;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 780px;
+}
+
+.product-grid .product {
+  position: relative;
+  border: 2px solid #080808;
+  border-radius: 15px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  overflow: hidden;
+}
+
+.product-grid .product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.product-grid .product .product-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
   color: white;
   text-align: center;
-  padding: 16px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.footer-link {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
+.product-grid .product:hover img {
+  transform: scale(1.1);
 }
 
-.footer-link:hover {
-  text-decoration: underline;
+.product-grid .product:hover .product-text {
+  opacity: 1;
 }
 
-.form-contacto {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.btn-outline {
-  border: 1px solid black;
-  padding: 6px 12px;
-  background: none;
-  cursor: pointer;
-}
-
-.btn-outline:hover {
-  background-color: #ddd;
-}
-
-.redes-contacto {
+.redes-contactoo {
   display: flex;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
+
+.redes-contactoo .btn-outline {
+  padding: 6px 12px;
+  background: none;
+  cursor: pointer;
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid #000000;
+  background-color: white;
+}
+
+.redes-contactoo .btn-outline:hover {
+  background-color: #ddd;
+}
+
+.form-contacto {
+  display: flex;
+  flex-direction: column;
+  grap: 10px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.form-contacto .btn-outline {
+  border: 1px solid black;
+  padding: 6px 12px;
+  background: none;
+  cursor: pointer;
+}
+
+.form-contacto .btn-outline:hover {
+  background-color: #ddd;
+}
+
+.form-contacto h5 {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Lilita One", sans-serif;
+  font-size: 28px;
+}
+
+.questions li {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.questions p {
+  font-size: 25px;
+  color: #333;
+  font-weight: normal;
+}
+
+.carousel-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 15px;
+}
+
+.carousel-container .carousel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 15px;
+}
+
+.carousel-container .carousel-grid img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-container .carousel-grid img:hover {
+  transform: scale(1.05);
+}
+
+.carousel-container .carousel-control-prev,
+.carousel-container .carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .carousel-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

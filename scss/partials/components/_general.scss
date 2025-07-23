@@ -1,0 +1,39 @@
+@use "../utilities/mixins" as *;
+
+body {
+        @include flexColumn;
+}
+
+main {
+        @include gridCenter;
+
+        .contenido-principal {
+                @include containerStyle;
+
+                .titulo {
+                        @include titleStyle;
+
+                }
+        }
+}
+
+.textindex {
+        font-size: 20px;
+        margin-top: 20px;
+}
+
+h2 {
+        font-weight: bold;
+}
+
+.icon {
+        width: 40px;
+        padding-right: 10px;
+}
+
+.acercatitulo {
+        font-size: 28px;
+        color: #4B8B3B;
+        font-weight: bold;
+        font-family: "Anton", sans-serif;
+}
