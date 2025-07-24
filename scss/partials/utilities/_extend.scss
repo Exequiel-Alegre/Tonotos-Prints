@@ -1,0 +1,31 @@
+%redes-contactos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 100%;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+%button-outline {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    background: none;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 1px solid $color-dark;
+    background-color: $color-light;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $color-gray;
+        transform: translateY(-2px);
+    }
+}

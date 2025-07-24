@@ -1,4 +1,5 @@
 @use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
 
 body {
         @include flexColumn;
@@ -18,12 +19,12 @@ main {
 }
 
 .textindex {
-        font-size: 20px;
+        font-size: $font.size-md;
         margin-top: 20px;
 }
 
 h2 {
-        font-weight: bold;
+        font-weight: $font-weight-bold;
 }
 
 .icon {
@@ -32,8 +33,7 @@ h2 {
 }
 
 .acercatitulo {
-        font-size: 28px;
-        color: #4B8B3B;
-        font-weight: bold;
-        font-family: "Anton", sans-serif;
+        font-size: font-size-lg;
+        color: $color;
+        font-weight: $font font-family: font-secondary;
 }
